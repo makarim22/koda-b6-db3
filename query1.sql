@@ -15,4 +15,5 @@ select count(*) from movies where rankscore between 5 and 7 and year between 200
 
 select count(*) from movies where rankscore=6;
 
+select name, genre from movies m inner join movies_genres mg on m.id = mg.movie_id limit 20;
 
