@@ -7,7 +7,7 @@ select md.director_id, d.first_name, d.last_name, m.name, m.year, m.rankscore, m
 select * from movies m 
  left join movies_directors ms 
  on m.id = ms.movie_id 
- inner join directors d 
+ left join directors d 
  on ms.director_id = d.id
  left join movies_genres mg 
  on m.id = mg.movie_id 
@@ -18,7 +18,8 @@ select * from roles r left join actors a on r.actor_id = a.id left join movies m
 
 ---
 select *
- from actors a left join roles r 
+ from actors a
+ left join roles r 
  on a.id = r.actor_id 
  left join movies m 
  on r.movie_id = m.id 
