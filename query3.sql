@@ -19,7 +19,7 @@ order by num_genre_directed desc
  limit 5;
 
 -- 3
-select md.director_id, d.id, d.first_name, d.last_name, count(md.movie_id) as total_movies_directed
+select md.director_id, d.first_name, d.last_name, count(md.movie_id) as total_movies_directed
 from movies_directors md
 left join directors d
 on md.director_id = d.id
